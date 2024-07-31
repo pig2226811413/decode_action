@@ -1,4 +1,4 @@
-const $ = new Env("\u5E01\u56ED\u4E50\u4E48\u4E86\u997F".split("").reverse().join(""));
+const $ = new Env('饿了么乐园币');
 const {
   "\u0067\u0065\u0074\u0054\u006f\u006b\u0065\u006e": getToken,
   "\u0063\u0068\u0065\u0063\u006b\u0043\u006b": checkCk,
@@ -326,9 +326,7 @@ function Env(_0x1759e6, _0x1c342e) {
         _0x2629a2 = _0x2629a2;
       }
       let _0x5a2f16 = this['get'];
-      if ('POST' === _0x211493) {
-        _0x5a2f16 = this['post'];
-      }
+      'POST' === _0x211493 && (_0x5a2f16 = this['post']);
       return new Promise((_0x178f13, _0x51b2d5) => {
         _0x5a2f16['call'](this, _0x2629a2, (_0x22a257, _0x4e7aa2, _0x4fc604) => {
           if (_0x22a257) {
@@ -542,23 +540,14 @@ function Env(_0x1759e6, _0x1c342e) {
       this['got'] ? this['got'] = this['got'] : this['got'] = require('got');
       this['cktough'] ? this['cktough'] = this['cktough'] : this['cktough'] = require('tough-cookie');
       this['ckjar'] ? this['ckjar'] = this['ckjar'] : this['ckjar'] = new this['cktough']['CookieJar']();
-      if (_0x2f50b9) {
-        _0x2f50b9['headers'] ? _0x2f50b9['headers'] = _0x2f50b9['headers'] : _0x2f50b9['headers'] = {};
-        0x0 === _0x2f50b9['headers']['Cookie'] && 0x0 === _0x2f50b9['cookieJar'] && (_0x2f50b9['cookieJar'] = this['ckjar']);
-      }
+      _0x2f50b9 && (_0x2f50b9['headers'] ? _0x2f50b9['headers'] = _0x2f50b9['headers'] : _0x2f50b9['headers'] = {}, 0x0 === _0x2f50b9['headers']['Cookie'] && 0x0 === _0x2f50b9['cookieJar'] && (_0x2f50b9['cookieJar'] = this['ckjar']));
     }
     ['get'](_0x47278e, _0x9411e8 = () => {}) {
-      if (_0x47278e['headers']) {
-        delete _0x47278e["\u0068\u0065\u0061\u0064\u0065\u0072\u0073"]['Content-Type'];
-        delete _0x47278e['headers']['Content-Length'];
-      }
+      _0x47278e['headers'] && (delete _0x47278e["\u0068\u0065\u0061\u0064\u0065\u0072\u0073"]['Content-Type'], delete _0x47278e['headers']['Content-Length']);
       this['isSurge']() || this['isLoon']() ? (this['isSurge']() && this['isNeedRewrite'] && (_0x47278e['headers'] = _0x47278e['headers'] || {}, Object['assign'](_0x47278e['headers'], {
         'X-Surge-Skip-Scripting': !0x1
       })), $httpClient['get'](_0x47278e, (_0x27cad1, _0x20b0c4, _0x55a96d) => {
-        if (!_0x27cad1 && _0x20b0c4) {
-          _0x20b0c4['body'] = _0x55a96d;
-          _0x20b0c4["\u0073\u0074\u0061\u0074\u0075\u0073\u0043\u006f\u0064\u0065"] = _0x20b0c4['status'];
-        }
+        !_0x27cad1 && _0x20b0c4 && (_0x20b0c4['body'] = _0x55a96d, _0x20b0c4["\u0073\u0074\u0061\u0074\u0075\u0073\u0043\u006f\u0064\u0065"] = _0x20b0c4['status']);
         _0x9411e8(_0x27cad1, _0x20b0c4, _0x55a96d);
       })) : this['isQuanX']() ? (this["\u0069\u0073\u004e\u0065\u0065\u0064\u0052\u0065\u0077\u0072\u0069\u0074\u0065"] && (_0x47278e['opts'] = _0x47278e['opts'] || {}, Object['assign'](_0x47278e['opts'], {
         'hints': !0x1
@@ -579,9 +568,7 @@ function Env(_0x1759e6, _0x1c342e) {
         try {
           if (_0x351234['headers']["\u0073\u0065\u0074\u002d\u0063\u006f\u006f\u006b\u0069\u0065"]) {
             const _0x368c7a = _0x351234['headers']['set-cookie']['map'](this['cktough']['Cookie']['parse'])['toString']();
-            if (_0x368c7a) {
-              this["\u0063\u006b\u006a\u0061\u0072"]['setCookieSync'](_0x368c7a, null);
-            }
+            _0x368c7a && this["\u0063\u006b\u006a\u0061\u0072"]['setCookieSync'](_0x368c7a, null);
             _0x1c27f7['cookieJar'] = this['ckjar'];
           }
         } catch (_0x3a1ff1) {
@@ -609,35 +596,22 @@ function Env(_0x1759e6, _0x1c342e) {
       }));
     }
     ['post'](_0x5b81c8, _0x2e6bc8 = () => {}) {
-      if (_0x5b81c8['body'] && _0x5b81c8['headers'] && !_0x5b81c8['headers']['Content-Type']) {
-        _0x5b81c8['headers']['Content-Type'] = 'application/x-www-form-urlencoded';
-      }
-      if (_0x5b81c8['headers']) {
-        delete _0x5b81c8['headers']['Content-Length'];
-      }
+      _0x5b81c8['body'] && _0x5b81c8['headers'] && !_0x5b81c8['headers']['Content-Type'] && (_0x5b81c8['headers']['Content-Type'] = 'application/x-www-form-urlencoded');
+      _0x5b81c8['headers'] && delete _0x5b81c8['headers']['Content-Length'];
       if (this['isSurge']() || this['isLoon']()) {
-        if (this['isSurge']() && this['isNeedRewrite']) {
-          _0x5b81c8['headers'] = _0x5b81c8['headers'] || {};
-          Object['assign'](_0x5b81c8['headers'], {
-            'X-Surge-Skip-Scripting': !0x1
-          });
-        }
+        this['isSurge']() && this['isNeedRewrite'] && (_0x5b81c8['headers'] = _0x5b81c8['headers'] || {}, Object['assign'](_0x5b81c8['headers'], {
+          'X-Surge-Skip-Scripting': !0x1
+        }));
         $httpClient['post'](_0x5b81c8, (_0xfa8f5c, _0x3edb78, _0x3f4afa) => {
-          if (!_0xfa8f5c && _0x3edb78) {
-            _0x3edb78['body'] = _0x3f4afa;
-            _0x3edb78['statusCode'] = _0x3edb78['status'];
-          }
+          !_0xfa8f5c && _0x3edb78 && (_0x3edb78['body'] = _0x3f4afa, _0x3edb78['statusCode'] = _0x3edb78['status']);
           _0x2e6bc8(_0xfa8f5c, _0x3edb78, _0x3f4afa);
         });
       } else {
         if (this['isQuanX']()) {
           _0x5b81c8['method'] = "\u0050\u004f\u0053\u0054";
-          if (this['isNeedRewrite']) {
-            _0x5b81c8['opts'] = _0x5b81c8['opts'] || {};
-            Object['assign'](_0x5b81c8['opts'], {
-              'hints': !0x1
-            });
-          }
+          this['isNeedRewrite'] && (_0x5b81c8['opts'] = _0x5b81c8['opts'] || {}, Object['assign'](_0x5b81c8['opts'], {
+            'hints': !0x1
+          }));
           $task['fetch'](_0x5b81c8)['then'](_0x3d3b9e => {
             const {
               statusCode: _0x5876fd,
@@ -743,20 +717,14 @@ function Env(_0x1759e6, _0x1c342e) {
       if (!this['isMuteLog']) {
         let _0x4f7ca4 = ["".split("").reverse().join(""), '==============📣系统通知📣=============='];
         _0x4f7ca4['push'](_0x23ef3e);
-        if (_0x1a70e9) {
-          _0x4f7ca4['push'](_0x1a70e9);
-        }
-        if (_0x3fd03a) {
-          _0x4f7ca4['push'](_0x3fd03a);
-        }
+        _0x1a70e9 && _0x4f7ca4['push'](_0x1a70e9);
+        _0x3fd03a && _0x4f7ca4['push'](_0x3fd03a);
         console['log'](_0x4f7ca4['join']('\x0a'));
         this['logs'] = this['logs']['concat'](_0x4f7ca4);
       }
     }
     ['log'](..._0x4c69e) {
-      if (_0x4c69e['length'] > 0x0) {
-        this['logs'] = [...this['logs'], ..._0x4c69e];
-      }
+      _0x4c69e['length'] > 0x0 && (this['logs'] = [...this['logs'], ..._0x4c69e]);
       console['log'](_0x4c69e['join'](this['logSeparator']));
     }
     ['logErr'](_0x4aa270, _0x1b0d74) {
@@ -771,9 +739,7 @@ function Env(_0x1759e6, _0x1c342e) {
         _0x486788 = (_0x2b3ff3 - this['startTime']) / (0x3955f ^ 0x396b7);
       this['log']('', '🔔' + this['name'] + " \uDD5B\uD83D !\u675F\u7ED3 ,".split("").reverse().join("") + _0x486788 + '\x20秒');
       this['log']();
-      if (this['isSurge']() || this['isQuanX']() || this['isLoon']()) {
-        $done(_0xd27aa3);
-      }
+      (this['isSurge']() || this['isQuanX']() || this['isLoon']()) && $done(_0xd27aa3);
     }
   }(_0x1759e6, _0x1c342e);
 }
